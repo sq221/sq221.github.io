@@ -196,15 +196,16 @@
 <p><strong>写在前面</strong>：入坑这本书的过程很像是一次冲动消费，没有在网上查阅任何资料，也没有去找可能看过的人咨询，看到一篇介绍性的公众号推送就直接下单了，以至于到真正开始看的时候才发现网上基本找不到第三版的答案。为什么这么冲动呢？用这本书封面上的一句话来说：“完全抛开行列式来描述线性算子的基本理论。”还需要别的理由吗？不需要了。</p>
 </blockquote>
 <p>[TOC]</p>
-<p><img src="C:\Users\86189\Desktop\数学试卷+好题\线代.jpg"></p>
+<p><img src="C:\Users\86189\Desktop\数学试卷+好题\线代.jpg" alt=""></p>
 <h2 id="1-向量空间"><a href="#1-向量空间" class="headerlink" title="1 向量空间"></a>1 向量空间</h2><h3 id="1-A-R-n-与-C-n"><a href="#1-A-R-n-与-C-n" class="headerlink" title="1.A $R^n$ 与 $C^n$"></a>1.A $R^n$ 与 $C^n$</h3><p>一些基本概念的定义，主要包括<strong>复数</strong>、$\textbf F^n$ 、<strong>组</strong>、<strong>向量</strong>、<strong>0</strong>、<strong>域</strong>以及一系列的算术性质</p>
 <p>长度为 $n$ 的组：$n$ 个有顺序的元素</p>
 <blockquote>
 <p>注：组的长度是有限的，元素允许重复，长度为0的组形如().</p>
 <p>形如 $(x_1,x_2,\dots)$ 的对象称为具有无限长度的序列.</p>
 </blockquote>
-<p>$\textbf F^n$: $\textbf F$ 中元素组成的长度为 $n$ 的组的集合($\textbf F$ 等于$R$ 或 $C$ )：<br>$$<br>\textbf F^n={(x_1,\dots,x_n):x_j\in F,j=1,\dots, n}.<br>$$</p>
-<blockquote>
+<p>$\textbf F^n$: $\textbf F$ 中元素组成的长度为 $n$ 的组的集合($\textbf F$ 等于$R$ 或 $C$ )：</p>
+<script type="math/tex; mode=display">
+\textbf F^n=\{(x_1,\dots,x_n):x_j\in F,j=1,\dots, n\}.</script><blockquote>
 <p>$\textbf F^n$ 是向量空间.</p>
 </blockquote>
 <h3 id="1-B-向量空间的定义"><a href="#1-B-向量空间的定义" class="headerlink" title="1.B 向量空间的定义"></a>1.B 向量空间的定义</h3><p>向量空间：带有加法和标量乘法的集合 $V$，满足下述性质： </p>
@@ -222,12 +223,16 @@
 <p>==子空间的条件==</p>
 <p>加法单位元、加法封闭性、标量乘法封闭性</p>
 <p>==子空间的和==</p>
-<p>子集的和：设 $U_1,\dots,U_m$ 都是 $V$ 的子集,则 $U_1.\dots,U_n$ 的和记作 $U_1+\cdots +U_m$ :<br>$$<br>U_1+\cdots+U_m={u_1+\cdots+u_m:u_1\in U_1,\dots,u_m\in U_m}.<br>$$<br><strong>子空间的和是子空间，且是包含这些子空间的最小子空间.</strong></p>
+<p>子集的和：设 $U_1,\dots,U_m$ 都是 $V$ 的子集,则 $U_1.\dots,U_n$ 的和记作 $U_1+\cdots +U_m$ :</p>
+<script type="math/tex; mode=display">
+U_1+\cdots+U_m=\{u_1+\cdots+u_m:u_1\in U_1,\dots,u_m\in U_m\}.</script><p><strong>子空间的和是子空间，且是包含这些子空间的最小子空间.</strong></p>
 <blockquote>
 <p>子空间的和类似于集合论中子集的并，但任意两个子空间都相交（至少都含有{<strong>0</strong>}）.</p>
 </blockquote>
 <p>==直和==</p>
-<p>设 $U_1,\dots,U_m$ 都是 $V$ 的子空间，则$U_1,\dots,U_m$ 中的每个元素都可以写成 $u_1+u_2+\dots+u_m$ 的形式.若该表示方法唯一，则称此处的 $U_1+\dots+U_m$ 为直和，表示为:<br>$$<br>U_1\oplus U_2\oplus \dots\oplus U_m<br>$$<br><strong>直和的充要条件：0表示成 $u_1+u_2+\dots+u_n$ 的唯一方式是每个 $u_j$ 都等于0</strong></p>
+<p>设 $U_1,\dots,U_m$ 都是 $V$ 的子空间，则$U_1,\dots,U_m$ 中的每个元素都可以写成 $u_1+u_2+\dots+u_m$ 的形式.若该表示方法唯一，则称此处的 $U_1+\dots+U_m$ 为直和，表示为:</p>
+<script type="math/tex; mode=display">
+U_1\oplus U_2\oplus \dots\oplus U_m</script><p><strong>直和的充要条件：0表示成 $u_1+u_2+\dots+u_n$ 的唯一方式是每个 $u_j$ 都等于0</strong></p>
 <p>换一种说法：<strong>当且仅当 $\bigcap_{i=1}^nU_i={0}$</strong> </p>
 <blockquote>
 <p>后一种说法在判断两个子空间的和是否为直和时更加简明.</p>
@@ -239,16 +244,23 @@
 <blockquote>
 <p>搞清楚子空间的和与并的区别是理解概念的关键</p>
 </blockquote>
-<h3 id="私货笔记"><a href="#私货笔记" class="headerlink" title="私货笔记"></a>私货笔记</h3><p>$$<br>\begin{align}<br>&amp;设U_1,U_2,\cdots U_n都是V的子空间,则U_1+U_2+\cdots+U_n为直和当且仅当0表示成 u_1+u_2+\dots+u_n 的唯一方式是\&amp;每个 u_j 都等于0.\&amp;这是教科书对直和的判定条件,我看到这的时候联想到线性无关的一些性质，就蹦出来了以下想法:\&amp;设U_1,U_2,\cdots U_n都是V的子空间,则U_1+U_2+\cdots+U_n为直和当且仅当任意U_i都不能表示为其余子空间的和.\&amp;显然这是不对的,反例如下:\&amp;考虑一个三维空间，可以由两个平面张成，并且这两个平面没法相互表示，这两个平面的和也不是直和.\&amp;这样必要性就被否定了.但充分性是显然的,证明如下:\&amp;假设U_r=U_{r_1}+U_{r_2}+\cdots+U_{r_m}(r\le n,m\le n-1,r\ne r_i(i=1,2,3\cdots m)),\&amp;则\forall u_r\in U_r,u_r=u_{r_1}+u_{r_2}+\cdots+u_{r_m}(u_{r_i}\in U_{r_i}).不妨设u_r\ne0.\&amp;则0=u_1+u_2+\cdots+u_n的表示方式除u_i=0(i=1,2,3\cdots n)外，还有0=u_r-u_{r_1}-u_{r_2}-\cdots-u_{r_n}+0+\cdots.\&amp;故U_1+U+2+\cdots+U_n不是直和,矛盾.充分性得证.<br>\end{align}<br>$$</p>
-<p>另外，关于课后习题中提到的一些结论，即12、13题：</p>
+<h3 id="私货笔记"><a href="#私货笔记" class="headerlink" title="私货笔记"></a>私货笔记</h3><script type="math/tex; mode=display">
+\begin{align}
+&设U_1,U_2,\cdots U_n都是V的子空间,则U_1+U_2+\cdots+U_n为直和当且仅当0表示成 u_1+u_2+\dots+u_n 的唯一方式是\\&每个 u_j 都等于0.\\&这是教科书对直和的判定条件,我看到这的时候联想到线性无关的一些性质，就蹦出来了以下想法:\\&设U_1,U_2,\cdots U_n都是V的子空间,则U_1+U_2+\cdots+U_n为直和当且仅当任意U_i都不能表示为其余子空间的和.\\&显然这是不对的,反例如下:\\&考虑一个三维空间，可以由两个平面张成，并且这两个平面没法相互表示，这两个平面的和也不是直和.\\&这样必要性就被否定了.但充分性是显然的,证明如下:\\&假设U_r=U_{r_1}+U_{r_2}+\cdots+U_{r_m}(r\le n,m\le n-1,r\ne r_i(i=1,2,3\cdots m)),\\&则\forall u_r\in U_r,u_r=u_{r_1}+u_{r_2}+\cdots+u_{r_m}(u_{r_i}\in U_{r_i}).不妨设u_r\ne0.\\&则0=u_1+u_2+\cdots+u_n的表示方式除u_i=0(i=1,2,3\cdots n)外，还有0=u_r-u_{r_1}-u_{r_2}-\cdots-u_{r_n}+0+\cdots.\\&故U_1+U+2+\cdots+U_n不是直和,矛盾.充分性得证.
+\end{align}</script><p>另外，关于课后习题中提到的一些结论，即12、13题：</p>
 <p><strong>12.$V$ 的两个子空间的并是 $V$ 的子空间当且仅当其中一个子空间包含另一个子空间.</strong></p>
 <p><strong>13.$V$ 的三个子空间的并是 $V$ 的子空间当且仅当其中一个子空间包含另两个子空间.</strong></p>
 <p>作者在13题下注：</p>
 <blockquote>
 <p>“令人惊讶的是，本题比上题难得多，或许是因为若将 $\textbf F$ 换成只包含两个元素的域，则本题的结论不再成立。”</p>
 </blockquote>
-<p>这一注解勾起了我的兴趣，但在这之前先把题证了吧：<br>$$<br>\begin{align}<br>12.&amp;证明:设U_1,U_2是V的两个子空间,M=U_1\bigcup U_2.若U_1\sub U_2,则M=U_2,则M是V的子空间.<br>\&amp;若M是V的子空间且U_1,U_2并无包含关系,任取u_1,u_2满足u_1\in U_1且u_1\notin U_2,u_2\in U_2且u_2\notin U_1,\&amp;因为u_1,u_2\in M且M是V的子空间,所以u_1+u_2\in M.若u_1+u_2\in U_1,根据子空间定义可知，\&amp;u_2\in U_1,矛盾.反之亦然.故u_1+u_2\notin M.得证.\13.&amp;证明:设U_1,U_2,U_3是V的三个子空间,分类讨论.若U_1\sub U_2\not\subset U_3,U_1\bigcup U_2=U_2,由12题结论可知,\&amp;当且仅当U_2\sub U_3时,U_2\bigcup U_3是V的子空间.若U_1,U_2,U_3均无包含关系,取u_1,u_2,u_3使得u_1\in U_1且\&amp;u_1\notin U_2\bigcup U_3,u_2,u_3同理.由12题可知,u_1+u_2\in U_3且u_1+u_2\notin U_1\bigcup U_2.\&amp;下证对任意k\in\textbf F(k\ne0),ku_1\in U_1且ku_1\notin U_2\bigcup U_3:\&amp;假设ku_1\in U_1\bigcap (U_2\bigcup U_3),由于子空间的交依然是子空间,所以k^{-1}ku_1=u_1\in U_2\bigcup U_3,矛盾.得证.\&amp;易知u_1+(u_1+u_2)\in U_2且u_1+(u_1+u_2)\notin U_1\bigcup U_3.又由引理易得2u_1+u_2\in U_3,矛盾.\<br>&amp;证毕.<br>\end{align}<br>$$</p>
-<p>简单证明之后，注的第一个值得商榷的地方便出来了：13题也没比12题难多少啊（此句划掉）。事实上，通过归纳法应当可以把这一结论推广到一般情况。</p>
+<p>这一注解勾起了我的兴趣，但在这之前先把题证了吧：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+12.&证明:设U_1,U_2是V的两个子空间,M=U_1\bigcup U_2.若U_1\sub U_2,则M=U_2,则M是V的子空间.
+\\&若M是V的子空间且U_1,U_2并无包含关系,任取u_1,u_2满足u_1\in U_1且u_1\notin U_2,u_2\in U_2且u_2\notin U_1,\\&因为u_1,u_2\in M且M是V的子空间,所以u_1+u_2\in M.若u_1+u_2\in U_1,根据子空间定义可知，\\&u_2\in U_1,矛盾.反之亦然.故u_1+u_2\notin M.得证.\\13.&证明:设U_1,U_2,U_3是V的三个子空间,分类讨论.若U_1\sub U_2\not\subset U_3,U_1\bigcup U_2=U_2,由12题结论可知,\\&当且仅当U_2\sub U_3时,U_2\bigcup U_3是V的子空间.若U_1,U_2,U_3均无包含关系,取u_1,u_2,u_3使得u_1\in U_1且\\&u_1\notin U_2\bigcup U_3,u_2,u_3同理.由12题可知,u_1+u_2\in U_3且u_1+u_2\notin U_1\bigcup U_2.\\&下证对任意k\in\textbf F(k\ne0),ku_1\in U_1且ku_1\notin U_2\bigcup U_3:\\&假设ku_1\in U_1\bigcap (U_2\bigcup U_3),由于子空间的交依然是子空间,所以k^{-1}ku_1=u_1\in U_2\bigcup U_3,矛盾.得证.\\&易知u_1+(u_1+u_2)\in U_2且u_1+(u_1+u_2)\notin U_1\bigcup U_3.又由引理易得2u_1+u_2\in U_3,矛盾.\\
+&证毕.
+\end{align}</script><p>简单证明之后，注的第一个值得商榷的地方便出来了：13题也没比12题难多少啊（此句划掉）。事实上，通过归纳法应当可以把这一结论推广到一般情况。</p>
 <p>言归正传，注中“只包含两个元素的域”指的是 ${0,1}$ 域，其中规定 $1+1=0$ .那么结论为何不成立呢？此事以后再议……</p>
 <h2 id="2-有限维向量空间"><a href="#2-有限维向量空间" class="headerlink" title="2 有限维向量空间"></a>2 有限维向量空间</h2><h3 id="2-A-张成空间与线性无关"><a href="#2-A-张成空间与线性无关" class="headerlink" title="2.A 张成空间与线性无关"></a>2.A 张成空间与线性无关</h3><p>==线性组合与张成空间==</p>
 <p><strong>线性组合</strong>：$V$ 中的一组向量的 $v_1,v_2,\dots,v_m$ 的线性组合是指形如 $a_1v_1+a_2v+2+\dots+a_mv_m$ 的一组向量，其中 $a_1,a_2,\dots,a_m\in\textbf F$.</p>
@@ -290,9 +302,12 @@
 <blockquote>
 <p>证明略，基本思路依然是构造。显然，有限维向量空间 $V$ 中任意向量组的张成空间都是 $V$ 的一个子空间，不妨只看线性无关组。由于有限维向量空间的张成组长度是有限的，$V$ 中线性无关组的长度有最大值，因而 $V$ 的任意子空间的线性无关的张成组长度是有限的，因此是有限维的。</p>
 </blockquote>
-<p>**$V$ 是无限维的当且仅当 $V$ 中存在一个向量序列 $v_1,v_2,\dots$ 使得当 $m$ 是任意正整数时 $v_1,\dots,v_m$ 都是线性无关的.**（习题14）</p>
-<p>摘几道习题：<br>$$<br>\begin{align}<br>&amp;9.证明或给出反例:若v_1,\dots,v_m和w_1,\dots,w_m都是V中的线性无关组,则v_1+w_1,\dots,v_m+w_m是线性无关的.\&amp;13.说明为什么4个多项式构成的组不能张成\mathcal P_4(\textbf F).\&amp;16.证明区间[0,1]上所有实值连续函数构成的实向量空间是无限维的.\&amp;17设p_0,p_1,\dots,p_m是\mathcal P_m(\textbf F)中的多项式使得对每个j都有p_j(2)=0.证明p_0,p_1,\dots，p_m在\mathcal P_m(\textbf F)中不是线性无关的.<br>\end{align}<br>$$</p>
-<h3 id="2-B-基"><a href="#2-B-基" class="headerlink" title="2.B 基"></a>2.B 基</h3><p><strong>基</strong>：若 $V$ 中的一个向量组既线性无关又张成 $V$ ，则称为 $V$ 的基.</p>
+<p><strong>$V$ 是无限维的当且仅当 $V$ 中存在一个向量序列 $v_1,v_2,\dots$ 使得当 $m$ 是任意正整数时 $v_1,\dots,v_m$ 都是线性无关的.</strong>（习题14）</p>
+<p>摘几道习题：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+&9.证明或给出反例:若v_1,\dots,v_m和w_1,\dots,w_m都是V中的线性无关组,则v_1+w_1,\dots,v_m+w_m是线性无关的.\\&13.说明为什么4个多项式构成的组不能张成\mathcal P_4(\textbf F).\\&16.证明区间[0,1]上所有实值连续函数构成的实向量空间是无限维的.\\&17设p_0,p_1,\dots,p_m是\mathcal P_m(\textbf F)中的多项式使得对每个j都有p_j(2)=0.证明p_0,p_1,\dots，p_m在\mathcal P_m(\textbf F)中不是线性无关的.
+\end{align}</script><h3 id="2-B-基"><a href="#2-B-基" class="headerlink" title="2.B 基"></a>2.B 基</h3><p><strong>基</strong>：若 $V$ 中的一个向量组既线性无关又张成 $V$ ，则称为 $V$ 的基.</p>
 <blockquote>
 <p>由线性无关组长度小于等于张成组长度可推知，基的长度唯一确定.</p>
 <p>组 $(1,0,\dots,0),(0,1,\dots,0),\dots,(0,0,\dots,1)$ 称为 $\textbf F^n$ 的标准基.</p>
@@ -304,9 +319,15 @@
 <p>由此可推出有限维向量空间必有基，线性无关组可扩充为基.</p>
 </blockquote>
 <p><strong>$V$ 的每个子空间都是 $V$ 的直和项</strong>：设 $V$ 是有限维的，$U$ 是 $V$ 的子空间，则存在 $V$ 的子空间 $W$ 使得 $V=U\oplus W$.</p>
-<p>摘几道习题：<br>$$<br>\begin{align}<br>&amp;1.找出只含一个基的所有向量空间.\&amp;2.证明或反驳:\mathcal P_3(\textbf F)有一个基p_0,p_1,p_2,p_3使得多项式p_0,p_1,p_2,p_3的次数都不等于2.<br>\end{align}<br>$$</p>
-<h3 id="2-C-维数"><a href="#2-C-维数" class="headerlink" title="2.C 维数"></a>2.C 维数</h3><h3 id="私货笔记-1"><a href="#私货笔记-1" class="headerlink" title="私货笔记"></a>私货笔记</h3><p>写几道习题的答案吧，摘抄的习题都是精选的，但限于篇幅和精力就不都给解答了。<br>$$<br>\begin{align}<br>2.A \quad&amp;17.这题可以用矩阵和行列式的相关知识做，也可以用线性方程组解的相关定理做，但只用书中已给的定理也可以做.\&amp;这里用书中定理证.若p_0,p_1,\dots,p_m线性无关,设p\in span(p_0,p_1,\dots,p_m),则p为p_0,p_1,\dots,p_m的线性组合.\&amp;由于p_j(2)=0,易知p(2)=0,若p为常数,则p=0.由此可知任意p’\ne0(p’为常数),p’,p_0,p_1,\dots,p_m线性无关.\&amp;这一线性无关组长度为m+2超过张成组(1,x,\dots,x^m)的长度,推出矛盾.<br>\end{align}<br>$$</p>
-<h2 id="3-线性映射"><a href="#3-线性映射" class="headerlink" title="3 线性映射"></a>3 线性映射</h2><h2 id="4-多项式"><a href="#4-多项式" class="headerlink" title="4 多项式"></a>4 多项式</h2><h2 id="5-本征值、本征向量、不变子空间"><a href="#5-本征值、本征向量、不变子空间" class="headerlink" title="5 本征值、本征向量、不变子空间"></a>5 本征值、本征向量、不变子空间</h2><h2 id="6-内积空间"><a href="#6-内积空间" class="headerlink" title="6 内积空间"></a>6 内积空间</h2><h2 id="7-内积空间上的算子"><a href="#7-内积空间上的算子" class="headerlink" title="7 内积空间上的算子"></a>7 内积空间上的算子</h2><h2 id="8-复向量空间上的算子"><a href="#8-复向量空间上的算子" class="headerlink" title="8 复向量空间上的算子"></a>8 复向量空间上的算子</h2><h2 id="9-实向量空间上的算子"><a href="#9-实向量空间上的算子" class="headerlink" title="9 实向量空间上的算子"></a>9 实向量空间上的算子</h2><h2 id="10-迹与行列式"><a href="#10-迹与行列式" class="headerlink" title="10 迹与行列式"></a>10 迹与行列式</h2>
+<p>摘几道习题：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+&1.找出只含一个基的所有向量空间.\\&2.证明或反驳:\mathcal P_3(\textbf F)有一个基p_0,p_1,p_2,p_3使得多项式p_0,p_1,p_2,p_3的次数都不等于2.
+\end{align}</script><h3 id="2-C-维数"><a href="#2-C-维数" class="headerlink" title="2.C 维数"></a>2.C 维数</h3><h3 id="私货笔记-1"><a href="#私货笔记-1" class="headerlink" title="私货笔记"></a>私货笔记</h3><p>写几道习题的答案吧，摘抄的习题都是精选的，但限于篇幅和精力就不都给解答了。</p>
+<script type="math/tex; mode=display">
+\begin{align}
+2.A \quad&17.这题可以用矩阵和行列式的相关知识做，也可以用线性方程组解的相关定理做，但只用书中已给的定理也可以做.\\&这里用书中定理证.若p_0,p_1,\dots,p_m线性无关,设p\in span(p_0,p_1,\dots,p_m),则p为p_0,p_1,\dots,p_m的线性组合.\\&由于p_j(2)=0,易知p(2)=0,若p为常数,则p=0.由此可知任意p'\ne0(p'为常数),p',p_0,p_1,\dots,p_m线性无关.\\&这一线性无关组长度为m+2超过张成组(1,x,\dots,x^m)的长度,推出矛盾.
+\end{align}</script><h2 id="3-线性映射"><a href="#3-线性映射" class="headerlink" title="3 线性映射"></a>3 线性映射</h2><h2 id="4-多项式"><a href="#4-多项式" class="headerlink" title="4 多项式"></a>4 多项式</h2><h2 id="5-本征值、本征向量、不变子空间"><a href="#5-本征值、本征向量、不变子空间" class="headerlink" title="5 本征值、本征向量、不变子空间"></a>5 本征值、本征向量、不变子空间</h2><h2 id="6-内积空间"><a href="#6-内积空间" class="headerlink" title="6 内积空间"></a>6 内积空间</h2><h2 id="7-内积空间上的算子"><a href="#7-内积空间上的算子" class="headerlink" title="7 内积空间上的算子"></a>7 内积空间上的算子</h2><h2 id="8-复向量空间上的算子"><a href="#8-复向量空间上的算子" class="headerlink" title="8 复向量空间上的算子"></a>8 复向量空间上的算子</h2><h2 id="9-实向量空间上的算子"><a href="#9-实向量空间上的算子" class="headerlink" title="9 实向量空间上的算子"></a>9 实向量空间上的算子</h2><h2 id="10-迹与行列式"><a href="#10-迹与行列式" class="headerlink" title="10 迹与行列式"></a>10 迹与行列式</h2>
       
     </div>
 
@@ -372,16 +393,12 @@
     <div class="post-body" itemprop="articleBody">
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
@@ -436,6 +453,12 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 
