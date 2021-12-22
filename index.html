@@ -177,9 +177,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-12-22 23:54:29 / 修改时间：23:56:16" itemprop="dateCreated datePublished" datetime="2021-12-22T23:54:29+08:00">2021-12-22</time>
+      <time title="创建时间：2021-12-22 23:54:29" itemprop="dateCreated datePublished" datetime="2021-12-22T23:54:29+08:00">2021-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-12-23 00:51:57" itemprop="dateModified" datetime="2021-12-23T00:51:57+08:00">2021-12-23</time>
     </span>
 
   
@@ -196,7 +202,7 @@
 <p><strong>写在前面</strong>：入坑这本书的过程很像是一次冲动消费，没有在网上查阅任何资料，也没有去找可能看过的人咨询，看到一篇介绍性的公众号推送就直接下单了，以至于到真正开始看的时候才发现网上基本找不到第三版的答案。为什么这么冲动呢？用这本书封面上的一句话来说：“完全抛开行列式来描述线性算子的基本理论。”还需要别的理由吗？不需要了。</p>
 </blockquote>
 <p>[TOC]</p>
-<p><img src="C:\Users\86189\Desktop\数学试卷+好题\线代.jpg" alt=""></p>
+<p><img src="C:\boke\boke\source\_posts\线代.jpg" alt=""></p>
 <h2 id="1-向量空间"><a href="#1-向量空间" class="headerlink" title="1 向量空间"></a>1 向量空间</h2><h3 id="1-A-R-n-与-C-n"><a href="#1-A-R-n-与-C-n" class="headerlink" title="1.A $R^n$ 与 $C^n$"></a>1.A $R^n$ 与 $C^n$</h3><p>一些基本概念的定义，主要包括<strong>复数</strong>、$\textbf F^n$ 、<strong>组</strong>、<strong>向量</strong>、<strong>0</strong>、<strong>域</strong>以及一系列的算术性质</p>
 <p>长度为 $n$ 的组：$n$ 个有顺序的元素</p>
 <blockquote>
@@ -209,7 +215,7 @@
 <p>$\textbf F^n$ 是向量空间.</p>
 </blockquote>
 <h3 id="1-B-向量空间的定义"><a href="#1-B-向量空间的定义" class="headerlink" title="1.B 向量空间的定义"></a>1.B 向量空间的定义</h3><p>向量空间：带有加法和标量乘法的集合 $V$，满足下述性质： </p>
-<p>==向量空间的性质==</p>
+<p><strong>向量空间的性质</strong></p>
 <p>交换性、结合性、加法单位元、加法逆元、乘法单位元、分配性</p>
 <blockquote>
 <p>加法单位元决定了空集不是向量空间，{<strong>0</strong>}是最简单的向量空间</p>
@@ -220,16 +226,16 @@
 <p>$\textbf F^S$ : 设 $S$ 是一个集合，$\textbf F^S$ 表示 $S$ 到 $\textbf F$ 的所有函数的集合. </p>
 <p>加法单位元、加法逆元具有唯一性.</p>
 <h3 id="1-C-子空间"><a href="#1-C-子空间" class="headerlink" title="1.C 子空间"></a>1.C 子空间</h3><p>子空间：如果 $V$ 的子集 $U$ 也是向量空间，则称 $U$ 是 $V$ 的<strong>子空间</strong> .</p>
-<p>==子空间的条件==</p>
+<p><strong>子空间的条件</strong></p>
 <p>加法单位元、加法封闭性、标量乘法封闭性</p>
-<p>==子空间的和==</p>
+<p><strong>子空间的和</strong></p>
 <p>子集的和：设 $U_1,\dots,U_m$ 都是 $V$ 的子集,则 $U_1.\dots,U_n$ 的和记作 $U_1+\cdots +U_m$ :</p>
 <script type="math/tex; mode=display">
 U_1+\cdots+U_m=\{u_1+\cdots+u_m:u_1\in U_1,\dots,u_m\in U_m\}.</script><p><strong>子空间的和是子空间，且是包含这些子空间的最小子空间.</strong></p>
 <blockquote>
 <p>子空间的和类似于集合论中子集的并，但任意两个子空间都相交（至少都含有{<strong>0</strong>}）.</p>
 </blockquote>
-<p>==直和==</p>
+<p><strong>直和</strong></p>
 <p>设 $U_1,\dots,U_m$ 都是 $V$ 的子空间，则$U_1,\dots,U_m$ 中的每个元素都可以写成 $u_1+u_2+\dots+u_m$ 的形式.若该表示方法唯一，则称此处的 $U_1+\dots+U_m$ 为直和，表示为:</p>
 <script type="math/tex; mode=display">
 U_1\oplus U_2\oplus \dots\oplus U_m</script><p><strong>直和的充要条件：0表示成 $u_1+u_2+\dots+u_n$ 的唯一方式是每个 $u_j$ 都等于0</strong></p>
@@ -262,7 +268,7 @@ U_1\oplus U_2\oplus \dots\oplus U_m</script><p><strong>直和的充要条件：0
 &证毕.
 \end{align}</script><p>简单证明之后，注的第一个值得商榷的地方便出来了：13题也没比12题难多少啊（此句划掉）。事实上，通过归纳法应当可以把这一结论推广到一般情况。</p>
 <p>言归正传，注中“只包含两个元素的域”指的是 $\{0,1\}$ 域，其中规定 $1+1=0$ .那么结论为何不成立呢？此事以后再议……</p>
-<h2 id="2-有限维向量空间"><a href="#2-有限维向量空间" class="headerlink" title="2 有限维向量空间"></a>2 有限维向量空间</h2><h3 id="2-A-张成空间与线性无关"><a href="#2-A-张成空间与线性无关" class="headerlink" title="2.A 张成空间与线性无关"></a>2.A 张成空间与线性无关</h3><p>==线性组合与张成空间==</p>
+<h2 id="2-有限维向量空间"><a href="#2-有限维向量空间" class="headerlink" title="2 有限维向量空间"></a>2 有限维向量空间</h2><h3 id="2-A-张成空间与线性无关"><a href="#2-A-张成空间与线性无关" class="headerlink" title="2.A 张成空间与线性无关"></a>2.A 张成空间与线性无关</h3><p><strong>线性组合与张成空间</strong></p>
 <p><strong>线性组合</strong>：$V$ 中的一组向量的 $v_1,v_2,\dots,v_m$ 的线性组合是指形如 $a_1v_1+a_2v+2+\dots+a_mv_m$ 的一组向量，其中 $a_1,a_2,\dots,a_m\in\textbf F$.</p>
 <p><strong>张成空间</strong>：$V$ 中的一组向量 $v_1,v_2,\dots,v_m$ 的所有线性组合所构成的集合称为 $v_1,v_2,\dots,v_m$ 的张成空间，记为 span$(v_1,\dots,v_m)$.也就是说，span $(v_1,\dots,v_m)=\{a_1v_1+a_2v+2+\dots+a_mv_m:a_1,\dots,a_m\in\textbf F\}$.空向量组（）的张成空间定义为$\{0\}$.</p>
 <blockquote>
@@ -279,7 +285,7 @@ U_1\oplus U_2\oplus \dots\oplus U_m</script><p><strong>直和的充要条件：0
 <p>对每个非负整数 $m$, $\mathcal P_m(\textbf F)$ 是有限维向量空间.</p>
 <p>$\mathcal P(\textbf F)$ 是无限维向量空间.</p>
 </blockquote>
-<p>==线性无关==</p>
+<p><strong>线性无关</strong></p>
 <p><strong>线性无关</strong>：对 $V$ 中一组向量 $v_1,v_2,\dots,v_m$，如果使得 $a_1v_1+a_2v+2+\dots+a_mv_m=0$ 的 $a_1,\dots,a_m\in\textbf F$ 只有 $a_1=\dots=a_m=0$，则称这组向量线性无关. 规定空组（）线性无关.</p>
 <p><strong>线性相关</strong>：存在不全为零的 $a_1,\dots,a_m\in\textbf F$ 使得 $a_1v_1+a_2v+2+\dots+a_mv_m=0$ ，则称 $v_1,v_2,\dots,v_m$ 线性相关.</p>
 <p>换一种说法：若 $V$ 中的一组向量中的某个向量是其余向量的线性组合，则这个向量组线性相关.</p>
