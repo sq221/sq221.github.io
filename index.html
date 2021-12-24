@@ -185,7 +185,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-24 08:33:04" itemprop="dateModified" datetime="2021-12-24T08:33:04+08:00">2021-12-24</time>
+      <time title="修改时间：2021-12-24 08:41:19" itemprop="dateModified" datetime="2021-12-24T08:41:19+08:00">2021-12-24</time>
     </span>
 
   
@@ -258,7 +258,7 @@ U_1\oplus U_2\oplus \dots\oplus U_m</script><p><strong>直和的充要条件：0
 <p>“令人惊讶的是，本题比上题难得多，或许是因为若将 $\textbf F$ 换成只包含两个元素的域，则本题的结论不再成立。”</p>
 </blockquote>
 <p>这一注勾起了我的兴趣，但在这之前先把题证了吧：</p>
-<p>$\begin{align}<br>12.&amp;证明:设U_1,U_2是V的两个子空间,M=U_1\bigcup U_2.若U_1\sub U_2,则M=U_2,则M是V的子空间.<br>\\&amp;若M是V的子空间且U_1,U_2并无包含关系,任取u_1,u_2满足u_1\in U_1且u_1\notin U_2,u_2\in U_2且u_2\notin U_1,\\&amp;因为u_1,u_2\in M且M是V的子空间,所以u_1+u_2\in M.若u_1+u_2\in U_1,根据子空间定义可知，\\&amp;u_2\in U_1,矛盾.反之亦然.故u_1+u_2\notin M.得证.\\13.&amp;证明:设U_1,U_2,U_3是V的三个子空间,分类讨论.若U_1\sub U_2\not\subset U_3,U_1\bigcup U_2=U_2,由12题结论可知,\\&amp;当且仅当U_2\sub U_3时,U_2\bigcup U_3是V的子空间.若U_1,U_2,U_3均无包含关系,取u_1,u_2,u_3使得u_1\in U_1且\\&amp;u_1\notin U_2\bigcup U_3,u_2,u_3同理.由12题可知,u_1+u_2\in U_3且u_1+u_2\notin U_1\bigcup U_2.\\&amp;下证对任意k\in\textbf F(k\ne0),ku_1\in U_1且ku_1\notin U_2\bigcup U_3:\\&amp;假设ku_1\in U_1\bigcap (U_2\bigcup U_3),由于子空间的交依然是子空间,所以k^{-1}ku_1=u_1\in U_2\bigcup U_3,矛盾.得证.\\&amp;易知u_1+(u_1+u_2)\in U_2且u_1+(u_1+u_2)\notin U_1\bigcup U_3.又由引理易得2u_1+u_2\in U_3,矛盾.\\<br>&amp;证毕.<br>\end{align}$</p>
+<p>$\begin{align}<br>12.&amp;证明:设U_1,U_2是V的两个子空间,M=U_1\bigcup U_2.若U_1\subset U_2,则M=U_2,则M是V的子空间.<br>\\&amp;若M是V的子空间且U_1,U_2并无包含关系,任取u_1,u_2满足u_1\in U_1且u_1\notin U_2,u_2\in U_2且u_2\notin U_1,\\&amp;因为u_1,u_2\in M且M是V的子空间,所以u_1+u_2\in M.若u_1+u_2\in U_1,根据子空间定义可知，\\&amp;u_2\in U_1,矛盾.反之亦然.故u_1+u_2\notin M.得证.\\13.&amp;证明:设U_1,U_2,U_3是V的三个子空间,分类讨论.若U_1\subset U_2\not\subsetset U_3,U_1\bigcup U_2=U_2,由12题结论可知,\\&amp;当且仅当U_2\subset U_3时,U_2\bigcup U_3是V的子空间.若U_1,U_2,U_3均无包含关系,取u_1,u_2,u_3使得u_1\in U_1且\\&amp;u_1\notin U_2\bigcup U_3,u_2,u_3同理.由12题可知,u_1+u_2\in U_3且u_1+u_2\notin U_1\bigcup U_2.\\&amp;下证对任意k\in\textbf F(k\ne0),ku_1\in U_1且ku_1\notin U_2\bigcup U_3:\\&amp;假设ku_1\in U_1\bigcap (U_2\bigcup U_3),由于子空间的交依然是子空间,所以k^{-1}ku_1=u_1\in U_2\bigcup U_3,矛盾.得证.\\&amp;易知u_1+(u_1+u_2)\in U_2且u_1+(u_1+u_2)\notin U_1\bigcup U_3.又由引理易得2u_1+u_2\in U_3,矛盾.\\<br>&amp;证毕.<br>\end{align}$</p>
 <p>简单证明之后，注的第一个值得商榷的地方便出来了：13题也没比12题难多少啊（此句划掉）。事实上，通过归纳法应当可以把这一结论推广到一般情况。</p>
 <p>言归正传，注中“只包含两个元素的域”指的是 $\{0,1\}$ 域，其中规定 $1+1=0$ .那么结论为何不成立呢？此事以后再议……</p>
 <h2 id="2-有限维向量空间"><a href="#2-有限维向量空间" class="headerlink" title="2 有限维向量空间"></a>2 有限维向量空间</h2><h3 id="2-A-张成空间与线性无关"><a href="#2-A-张成空间与线性无关" class="headerlink" title="2.A 张成空间与线性无关"></a>2.A 张成空间与线性无关</h3><p><strong>线性组合与张成空间</strong></p>
