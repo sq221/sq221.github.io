@@ -20,25 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="但我将坦然，欣然。我将大笑，我将歌唱。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="时棋的自留地">
-<meta property="og:url" content="http://example.com/index.html">
+<meta name="description" content="前言记录一下寒假学数分的过程中遇到的问题，不一定是偏题难题，有些概念问题，也有一点小探究……当然并不一定是成功的探究，甚至可以说失败肯定居多。 那便惟愿博君一笑尔。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数分笔记">
+<meta property="og:url" content="http://example.com/2022/01/10/%E6%95%B0%E5%88%86%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="时棋的自留地">
-<meta property="og:description" content="但我将坦然，欣然。我将大笑，我将歌唱。">
+<meta property="og:description" content="前言记录一下寒假学数分的过程中遇到的问题，不一定是偏题难题，有些概念问题，也有一点小探究……当然并不一定是成功的探究，甚至可以说失败肯定居多。 那便惟愿博君一笑尔。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-01-10T06:16:09.000Z">
+<meta property="article:modified_time" content="2022-01-10T08:36:45.739Z">
 <meta property="article:author" content="时棋">
+<meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/01/10/%E6%95%B0%E5%88%86%E7%AC%94%E8%AE%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/01/10/%E6%95%B0%E5%88%86%E7%AC%94%E8%AE%B0/","path":"2022/01/10/数分笔记/","title":"数分笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>时棋的自留地</title>
+<title>数分笔记 | 时棋的自留地</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -69,7 +72,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">时棋的自留地</h1>
+      <p class="site-title">时棋的自留地</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -106,7 +109,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -119,6 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2arcsin-sqrt-x-%E4%B8%8E-arcsin-2x-1-%E5%A4%B1%E8%B4%A5%E5%B0%9D%E8%AF%95"><span class="nav-number">1.1.</span> <span class="nav-text">1. $2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%80%E7%B1%BB%E6%97%A0%E7%90%86%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="nav-number">1.2.</span> <span class="nav-text">2.一类无理函数的不定积分</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -172,16 +176,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/10/%E6%95%B0%E5%88%86%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -194,9 +199,9 @@
       <meta itemprop="name" content="时棋的自留地">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/01/10/%E6%95%B0%E5%88%86%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">数分笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          数分笔记
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -220,17 +225,36 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>记录一下寒假学数分的过程中遇到的问题，不一定是偏题难题，有些概念问题，也有一点小探究……当然并不一定是成功的探究，甚至可以说失败肯定居多。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>记录一下寒假学数分的过程中遇到的问题，不一定是偏题难题，有些概念问题，也有一点小探究……当然并不一定是成功的探究，甚至可以说失败肯定居多。</p>
 <p>那便惟愿博君一笑尔。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/10/%E6%95%B0%E5%88%86%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+ <span id="more"></span>
+<h2 id="1-2arcsin-sqrt-x-与-arcsin-2x-1-失败尝试"><a href="#1-2arcsin-sqrt-x-与-arcsin-2x-1-失败尝试" class="headerlink" title="1. $2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)"></a>1. $2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)</h2><p>这个问题来源于伍胜健数学分析教材的一道例题，求不定积分：</p>
+<script type="math/tex; mode=display">
+\int \frac{dx}{\sqrt{x(1-x)}}</script><p>题目很简单，有两种解法：</p>
+<p>解法一：</p>
+<script type="math/tex; mode=display">
+\int \frac{dx}{\sqrt{x(1-x)}}=2\int\frac{d\sqrt x}{\sqrt{1-x}}=2arcsin(\sqrt x)+C</script><p>解法二：</p>
+<script type="math/tex; mode=display">
+\int \frac{dx}{\sqrt{\frac{1}{4}-(x-\frac{1}{2})^2}}=\int\frac{d(2x-1)}{\sqrt{1-(2x-1)^2}}=arcsin(2x-1)+C</script><p>于是乎问题来了，同一个被积函数积出来了两个原函数，说明这俩原函数之间只差一个常数。</p>
+<p>教材注：“虽然两种方法得到的答案形式不同，但实质上它们只相差一个常数。这一点请读者自行验证之。”</p>
+<p>从导数层面这个事实是显然的，那么试试求一下这个差的常数吧。</p>
+<p>设$\begin{cases}\alpha=2arcsin(\sqrt x)\\\beta=arcsin(2x-1)\end{cases}$ ，则$\begin{cases}x=sin^2(\frac{\alpha}{2})\\x=\frac{sin\beta+1}{2}\end{cases}$ .$sin^2(\frac{\alpha}{2})=\frac{1-cos\alpha}{2}=\frac{sin\beta+1}{2}$ ，则$cos\alpha=-sin\beta$ .</p>
+<p>由此可知，$\alpha=2k\pi+\beta+\frac{\pi}{2}$或$\alpha=2k\pi+\frac{3\pi}{2}-\beta$ .又因为$\alpha\in[0,\pi],\beta\in[-\frac{\pi}{2},\frac{\pi}{2}]$ 。所以$\alpha=\beta+\frac{\pi}{2}$.</p>
+<p>这样的过程应当是可以接受的。</p>
+<p>那么，是否存在一种规律，可以找到所有有着相同导数的反三角函数呢？或者说，可以快速判断两个反三角函数的导数是否相同的方法。虽然感觉这像是没事找事，但貌似挺有意思的。不妨就以反正弦函数为例：</p>
+<p>设$f(x)=Aarcsin(mx^p+n),(A,m,p\ne 0)$ ,则$f’(x)=\frac{1}{\sqrt{-\frac{x^2}{A^2p^2}-\frac{2n}{A^2mp^2x^{p-2}}+\frac{1-n^2}{A^2m^2p^2x^{2p-2}}}}$</p>
+<p>可以看到，去找规律涉及到复杂的分类讨论，显然吃力不讨好。</p>
+<p>寒假开门红，第一次尝试就失败了。但显然这其中是有规律的，但描述并记忆其中的规律不如直接去求导。若真有应用的空间，临场推导也未尝不可。</p>
+<h2 id="2-一类无理函数的不定积分"><a href="#2-一类无理函数的不定积分" class="headerlink" title="2.一类无理函数的不定积分"></a>2.一类无理函数的不定积分</h2><p>“一类无理函数”指的是这类：$x^\alpha(a+bx^\beta)^\gamma$,其中$\alpha,\beta,\gamma\in Q,a,b\in R$.</p>
+<p>史济怀的《数学分析教程》包含了将这类无理函数化为有理函数来求原函数的方法，但个人看来叙述并不清晰。在此引述一下（关于化有理函数条件的证明）：</p>
+<p>如果$\gamma,\frac{\alpha+1}{\beta},\frac{\alpha+1}{\beta}+\gamma$三个数中有一个是整数，那么被积函数可化作有理函数来求原函数；否则，它的原函数不能用初等函数来表示。下证前一结论。</p>
+<p>（由于他证明不清楚的地方是一样的，这里就只记一种情况）</p>
+<p>如果$\gamma$是整数，做变量代换$x^\beta=t$，则$x=t^{\frac{1}{\beta}},dx=\frac{1}{\beta}t^{\frac{1}{\beta}-1}$ ，于是$\int x^\alpha(a+bx^\beta)^\gamma dx=\frac{1}{\beta}\int t^{\frac{\alpha+1}{\beta}-1}(a+bt)^\gamma dt$ .记该式为式（1）.因为$\frac{\alpha+1}{\beta}-1$是有理数，记$\frac{\alpha+1}{\beta}-1=\frac{q}{p}$，故式（1）的右边可写为$\frac{1}{\beta}\int(\sqrt[p]{t})^q(a+bt)^\gamma dt$ ，由式（1）可知该式的被积函数可有理化。</p>
+<p>……</p>
+<p>没了。对，这一句话之后就没有更多解释了，我也搞不懂咋就可有理化了。</p>
+<p>然后查了查伍胜健版教材，才找到答案。针对上述情况而言，$\gamma$为整数时，式（1）的右边最多含有一个根式，根式内的线性分式为$t$，因此只要作变换$z=\sqrt[p]t=\sqrt[p]{x^\beta}$ ，便可写为$\frac{1}{\beta}\int pz^{q+p-1}(a+bz^p)^\gamma dz$.这便将原函数化为有理函数了。另外两种情况也可用类似的方法证明。</p>
+<p>至于后一结论，等有空再找资料更新吧。</p>
+
     </div>
 
     
@@ -238,187 +262,42 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/uploads/wechat.jpg">
+          <span class="icon">
+            <i class="fab fa-weixin"></i>
+          </span>
+
+          <span class="label">WeChat</span>
+        </a>
+      </div>
+  </div>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" rel="tag"># 数学分析</a>
+          </div>
 
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/24/%E5%85%B3%E4%BA%8E%E8%8A%9D%E8%AF%BA%E6%82%96%E8%AE%BA%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/17.gif">
-      <meta itemprop="name" content="时棋">
-      <meta itemprop="description" content="但我将坦然，欣然。我将大笑，我将歌唱。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="时棋的自留地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/24/%E5%85%B3%E4%BA%8E%E8%8A%9D%E8%AF%BA%E6%82%96%E8%AE%BA%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" class="post-title-link" itemprop="url">关于芝诺悖论的一些思考</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-12-24 15:16:52" itemprop="dateCreated datePublished" datetime="2021-12-24T15:16:52+08:00">2021-12-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-27 22:00:49" itemprop="dateModified" datetime="2021-12-27T22:00:49+08:00">2021-12-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%93%B2%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">哲学</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="关于芝诺悖论的一些思考"><a href="#关于芝诺悖论的一些思考" class="headerlink" title="关于芝诺悖论的一些思考"></a>关于芝诺悖论的一些思考</h1><p>芝诺（约公元前6世纪～公元前5世纪）是古希腊爱利亚学派的一名主要代表。其主要理论活动是论证他的老师巴曼尼德的存在的唯一性和不动性观念，否定“多”和“运动”。芝诺本人并无著作传世，如今为人们所熟知的芝诺悖论，是他关于运动存在的四个悖论，包括二分法悖论、阿基里斯悖论、飞矢不动悖论以及运动场悖论，被完整地收录于亚里士多德的《物理学》一书中。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/24/%E5%85%B3%E4%BA%8E%E8%8A%9D%E8%AF%BA%E6%82%96%E8%AE%BA%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/17.gif">
-      <meta itemprop="name" content="时棋">
-      <meta itemprop="description" content="但我将坦然，欣然。我将大笑，我将歌唱。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="时棋的自留地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">线代笔记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-12-24 15:08:28" itemprop="dateCreated datePublished" datetime="2021-12-24T15:08:28+08:00">2021-12-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-27 23:15:23" itemprop="dateModified" datetime="2021-12-27T23:15:23+08:00">2021-12-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>总的来说，就是一个被北大版高代教材折磨的人终于打算另起炉灶了。《线性代数应该这样学这本书打着”完全抛开行列式来描述线性算子的基本理论”的广告，成功吸引了我的注意力……</p>
-<p>这份笔记主要整理了这本书各章各节的主要内容，对于重要定理略过了书上的证明过程，同时选了一些有意思的习题放在每节的最后（如果有的话）。当然，这本书网上都找不到标答，这里自然也不会有每道题的详细解析，一些笔者个人的思考和部分题的证明还是有的。</p>
-<p>希望这份笔记会有帮助。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/12/24/%E5%85%B3%E4%BA%8E%E8%8A%9D%E8%AF%BA%E6%82%96%E8%AE%BA%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" rel="prev" title="关于芝诺悖论的一些思考">
+                  <i class="fa fa-chevron-left"></i> 关于芝诺悖论的一些思考
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
+
 
 
 
