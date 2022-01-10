@@ -28,7 +28,7 @@
 <meta property="og:description" content="记录一下寒假学数分的过程中遇到的问题，不一定是偏题难题，有些概念问题，也有一点小探究……当然并不一定是成功的探究，甚至可以说失败肯定居多。 那便惟愿博君一笑尔。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-10T06:16:09.000Z">
-<meta property="article:modified_time" content="2022-01-10T09:41:36.338Z">
+<meta property="article:modified_time" content="2022-01-10T09:44:36.979Z">
 <meta property="article:author" content="时棋">
 <meta property="article:tag" content="数学分析">
 <meta name="twitter:card" content="summary">
@@ -122,7 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2arcsin-sqrt-x-%E4%B8%8E-arcsin-2x-1-%E5%A4%B1%E8%B4%A5%E5%B0%9D%E8%AF%95"><span class="nav-number">1.</span> <span class="nav-text">1. $2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%80%E7%B1%BB%E6%97%A0%E7%90%86%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">2.一类无理函数的不定积分</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2arcsin-sqrt-x-%E4%B8%8E-arcsin-2x-1-%E5%A4%B1%E8%B4%A5%E5%B0%9D%E8%AF%95"><span class="nav-number">1.</span> <span class="nav-text">$2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E7%B1%BB%E6%97%A0%E7%90%86%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">一类无理函数的不定积分</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -212,7 +212,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-01-10 14:16:09 / 修改时间：17:41:36" itemprop="dateCreated datePublished" datetime="2022-01-10T14:16:09+08:00">2022-01-10</time>
+      <time title="创建时间：2022-01-10 14:16:09 / 修改时间：17:44:36" itemprop="dateCreated datePublished" datetime="2022-01-10T14:16:09+08:00">2022-01-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -237,7 +237,7 @@
         <p>记录一下寒假学数分的过程中遇到的问题，不一定是偏题难题，有些概念问题，也有一点小探究……当然并不一定是成功的探究，甚至可以说失败肯定居多。</p>
 <p>那便惟愿博君一笑尔。</p>
  <span id="more"></span>
-<h2 id="1-2arcsin-sqrt-x-与-arcsin-2x-1-失败尝试"><a href="#1-2arcsin-sqrt-x-与-arcsin-2x-1-失败尝试" class="headerlink" title="1. $2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)"></a>1. $2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)</h2><p>这个问题来源于伍胜健数学分析教材的一道例题，求不定积分：</p>
+<h1 id="2arcsin-sqrt-x-与-arcsin-2x-1-失败尝试"><a href="#2arcsin-sqrt-x-与-arcsin-2x-1-失败尝试" class="headerlink" title="$2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)"></a>$2arcsin(\sqrt x)$与$arcsin(2x-1)$ (失败尝试)</h1><p>这个问题来源于伍胜健数学分析教材的一道例题，求不定积分：</p>
 <script type="math/tex; mode=display">
 \int \frac{dx}{\sqrt{x(1-x)}}</script><p>题目很简单，有两种解法：</p>
 <p>解法一：</p>
@@ -254,7 +254,7 @@
 <p>设$f(x)=Aarcsin(mx^p+n),(A,m,p\ne 0)$ ,则$f’(x)=\frac{1}{\sqrt{-\frac{x^2}{A^2p^2}-\frac{2n}{A^2mp^2x^{p-2}}+\frac{1-n^2}{A^2m^2p^2x^{2p-2}}}}$</p>
 <p>可以看到，去找规律涉及到复杂的分类讨论，显然吃力不讨好。</p>
 <p>寒假开门红，第一次尝试就失败了。但显然这其中是有规律的，但描述并记忆其中的规律不如直接去求导。若真有应用的空间，临场推导也未尝不可。</p>
-<h2 id="2-一类无理函数的不定积分"><a href="#2-一类无理函数的不定积分" class="headerlink" title="2.一类无理函数的不定积分"></a>2.一类无理函数的不定积分</h2><p>“一类无理函数”指的是这类：$x^\alpha(a+bx^\beta)^\gamma$,其中$\alpha,\beta,\gamma\in Q,a,b\in R$.</p>
+<h1 id="一类无理函数的不定积分"><a href="#一类无理函数的不定积分" class="headerlink" title="一类无理函数的不定积分"></a>一类无理函数的不定积分</h1><p>“一类无理函数”指的是这类：$x^\alpha(a+bx^\beta)^\gamma$,其中$\alpha,\beta,\gamma\in Q,a,b\in R$.</p>
 <p>史济怀的《数学分析教程》包含了将这类无理函数化为有理函数来求原函数的方法，但个人看来叙述并不清晰。在此引述一下（关于化有理函数条件的证明）：</p>
 <p>如果$\gamma,\frac{\alpha+1}{\beta},\frac{\alpha+1}{\beta}+\gamma$三个数中有一个是整数，那么被积函数可化作有理函数来求原函数；否则，它的原函数不能用初等函数来表示。下证前一结论。</p>
 <p>（由于他证明不清楚的地方是一样的，这里就只记一种情况）</p>
