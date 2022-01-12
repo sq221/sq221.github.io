@@ -22,29 +22,29 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="前言总的来说，就是一个被北大版高代教材折磨的人终于打算另起炉灶了。《线性代数应该这样学这本书打着”完全抛开行列式来描述线性算子的基本理论”的广告，成功吸引了我的注意力…… 这份笔记主要整理了这本书各章各节的主要内容，对于重要定理略过了书上的证明过程，同时选了一些有意思的习题放在每节的最后（如果有的话）。当然，这本书网上都找不到标答，这里自然也不会有每道题的详细解析，一些笔者个人的思考和部分题的证明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线代笔记">
-<meta property="og:url" content="http://example.com/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="Linear Algebra Done Right">
+<meta property="og:url" content="http://example.com/2021/12/24/Linear%20Algebra%20Done%20Right/index.html">
 <meta property="og:site_name" content="时棋的自留地">
 <meta property="og:description" content="前言总的来说，就是一个被北大版高代教材折磨的人终于打算另起炉灶了。《线性代数应该这样学这本书打着”完全抛开行列式来描述线性算子的基本理论”的广告，成功吸引了我的注意力…… 这份笔记主要整理了这本书各章各节的主要内容，对于重要定理略过了书上的证明过程，同时选了一些有意思的习题放在每节的最后（如果有的话）。当然，这本书网上都找不到标答，这里自然也不会有每道题的详细解析，一些笔者个人的思考和部分题的证明">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/线代.jpg">
+<meta property="og:image" content="http://example.com/2021/12/24/Linear%20Algebra%20Done%20Right/线代.jpg">
 <meta property="article:published_time" content="2021-12-24T07:08:28.000Z">
-<meta property="article:modified_time" content="2021-12-27T15:15:23.070Z">
+<meta property="article:modified_time" content="2022-01-12T08:02:05.947Z">
 <meta property="article:author" content="时棋">
 <meta property="article:tag" content="代数">
 <meta property="article:tag" content="线性代数">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/线代.jpg">
+<meta name="twitter:image" content="http://example.com/2021/12/24/Linear%20Algebra%20Done%20Right/线代.jpg">
 
 
-<link rel="canonical" href="http://example.com/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://example.com/2021/12/24/Linear%20Algebra%20Done%20Right/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/","path":"2021/12/24/线代笔记/","title":"线代笔记"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/12/24/Linear%20Algebra%20Done%20Right/","path":"2021/12/24/Linear Algebra Done Right/","title":"Linear Algebra Done Right"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>线代笔记 | 时棋的自留地</title>
+<title>Linear Algebra Done Right | 时棋的自留地</title>
   
 
   <script src="/js/third-party/analytics/baidu-analytics.js"></script>
@@ -125,7 +125,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">2.</span> <span class="nav-text">向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#textbf-R-n-%E4%B8%8E-textbf-C-n"><span class="nav-number">2.1.</span> <span class="nav-text">$\textbf R^n$与$\textbf C^n$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.2.</span> <span class="nav-text">向量空间的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-number">2.3.</span> <span class="nav-text">子空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%81%E8%B4%A7%E7%AC%94%E8%AE%B0"><span class="nav-number">2.4.</span> <span class="nav-text">私货笔记</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">3.</span> <span class="nav-text">有限维向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%A0%E6%88%90%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3"><span class="nav-number">3.1.</span> <span class="nav-text">张成空间与线性无关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA"><span class="nav-number">3.2.</span> <span class="nav-text">基</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%B4%E6%95%B0"><span class="nav-number">3.3.</span> <span class="nav-text">维数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%81%E8%B4%A7%E7%AC%94%E8%AE%B0-1"><span class="nav-number">3.4.</span> <span class="nav-text">私货笔记</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">2.</span> <span class="nav-text">向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#textbf-R-n-%E4%B8%8E-textbf-C-n"><span class="nav-number">2.1.</span> <span class="nav-text">$\textbf R^n$与$\textbf C^n$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.2.</span> <span class="nav-text">向量空间的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-number">2.3.</span> <span class="nav-text">子空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%81%E8%B4%A7%E7%AC%94%E8%AE%B0"><span class="nav-number">2.4.</span> <span class="nav-text">私货笔记</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4"><span class="nav-number">3.</span> <span class="nav-text">有限维向量空间</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%A0%E6%88%90%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3"><span class="nav-number">3.1.</span> <span class="nav-text">张成空间与线性无关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA"><span class="nav-number">3.2.</span> <span class="nav-text">基</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%B4%E6%95%B0"><span class="nav-number">3.3.</span> <span class="nav-text">维数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%81%E8%B4%A7%E7%AC%94%E8%AE%B0-1"><span class="nav-number">3.4.</span> <span class="nav-text">私货笔记</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%98%A0%E5%B0%84"><span class="nav-number">4.</span> <span class="nav-text">线性映射</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BA%BF%E6%80%A7%E6%98%A0%E5%B0%84"><span class="nav-number">4.1.</span> <span class="nav-text">向量空间的线性映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%B6%E7%A9%BA%E9%97%B4%E5%92%8C%E5%80%BC%E5%9F%9F"><span class="nav-number">4.2.</span> <span class="nav-text">零空间和值域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A7%81%E8%B4%A7%E7%AC%94%E8%AE%B0-2"><span class="nav-number">4.3.</span> <span class="nav-text">私货笔记</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -190,7 +190,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/24/Linear%20Algebra%20Done%20Right/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/17.gif">
@@ -203,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          线代笔记
+          Linear Algebra Done Right
         </h1>
 
         <div class="post-meta-container">
@@ -221,7 +221,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-27 23:15:23" itemprop="dateModified" datetime="2021-12-27T23:15:23+08:00">2021-12-27</time>
+      <time title="修改时间：2022-01-12 16:02:05" itemprop="dateModified" datetime="2022-01-12T16:02:05+08:00">2022-01-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -247,7 +247,7 @@
 <p>这份笔记主要整理了这本书各章各节的主要内容，对于重要定理略过了书上的证明过程，同时选了一些有意思的习题放在每节的最后（如果有的话）。当然，这本书网上都找不到标答，这里自然也不会有每道题的详细解析，一些笔者个人的思考和部分题的证明还是有的。</p>
 <p>希望这份笔记会有帮助。</p>
  <span id="more"></span>
-<p><img src="/2021/12/24/%E7%BA%BF%E4%BB%A3%E7%AC%94%E8%AE%B0/线代.jpg" alt="image"></p>
+<p><img src="/2021/12/24/Linear%20Algebra%20Done%20Right/线代.jpg" alt="image"></p>
 <h1 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h1><h2 id="textbf-R-n-与-textbf-C-n"><a href="#textbf-R-n-与-textbf-C-n" class="headerlink" title="$\textbf R^n$与$\textbf C^n$"></a>$\textbf R^n$与$\textbf C^n$</h2><p>一些基本概念的定义，主要包括复数、$\textbf F^n$ 、组、向量、0、域以及一系列的算术性质.</p>
 <p>长度为 $n$ 的组：$n$ 个有顺序的元素</p>
 <p>注：组的长度是有限的，元素允许重复，长度为0的组形如().</p>
@@ -313,7 +313,7 @@
 <p>换一种说法：若 $V$ 中的一组向量中的某个向量是其余向量的线性组合，则这个向量组线性相关.</p>
 <p>包含 $0$ 向量的向量组线性相关.</p>
 <p><strong>线性相关性引理</strong>：设 $v_1,v_2,\dots,v_m$ 是 $V$ 中的一个线性相关的向量组. 则有 $j\in\{1,2,\dots,m\}$ 使得:</p>
-<p>(a) $v_j\in$span $(v_1,v_2,\dots,v_m)$</p>
+<p>(a) $v_j\in$span $(v_1,v_2,\dots,v_{j-1})$</p>
 <p>(b) 若从 $v_1,v_2,\dots,v_m$ 中去掉第 $j$ 项，则剩余组的张成空间等于span $(v_1,v_2,\dots,v_m)$</p>
 <p>注意一下 $j=1$ 的情况，(b)的一般情况证明需要改动.</p>
 <p><strong>线性无关组的长度 $\le$ 张成组的长度</strong></p>
@@ -362,6 +362,44 @@
 <p>3.3</p>
 <p>16.见3.2第8题，由维数的定义与上述结论可得.<br>17.由dim$(U_1+U_2)=$dim$U_1+$dim$U_2-$dim$(U_1\bigcap U_2)$,代入可得dim$(U_1\bigcap U_2\bigcap U_3)=$dim$U_1+$dim$U_2+$dim$U_3-$dim$(U_1\bigcap U_2)-$dim$[(U_1+U_2)\bigcap U_3]$.而dim$[(U_1+U_2)\bigcap U_3]=$dim$(U_1\bigcap U_3+U_2\bigcap U_3)=$dim$(U_1\bigcap U_3)+$dim$(U_2\bigcap U_3)-$dim$(U_1\bigcap U_2\bigcap U_3)$.得证.</p>
 <p>注：考察向量空间的维数往往可以转化为研究空间的基.这里的证明直接使用了定理，但定理本身和这道题都应当可以在基的层面考虑.</p>
+<h1 id="线性映射"><a href="#线性映射" class="headerlink" title="线性映射"></a>线性映射</h1><h2 id="向量空间的线性映射"><a href="#向量空间的线性映射" class="headerlink" title="向量空间的线性映射"></a>向量空间的线性映射</h2><p><strong>线性映射的定义</strong></p>
+<p>从$V$到$W$的线性映射是具有加性和齐性的函数$T:V\rightarrow W$.</p>
+<p><strong>加性：</strong>对所有$u,v\in V$都有$T(u+v)=Tu+Tv$</p>
+<p><strong>齐性：</strong>对所有$\lambda\in\textbf{F}$和$v\in V$都有$T(\lambda v)=\lambda(Tv)$</p>
+<p>记号$\mathcal{L}(V,W)$：从$V$到$W$的所有线性映射构成的集合.</p>
+<p><strong>例子</strong></p>
+<p><strong>零：</strong>$0\in\mathcal{L}(V,W)$定义为$0v=0$ (左边的$0$为函数，右边的$0$为$W$的加法单位元)</p>
+<p><strong>恒等映射：</strong>$I\in\mathcal{L}(V,V)$定义为$Iv=v$</p>
+<p><strong>微分：</strong>$D\in\mathcal{L}(\mathcal{P}(\textbf{R}),\mathcal{P}(\textbf{R}))$定义为$Dp=p’$</p>
+<p><strong>线性映射与定义域的基</strong></p>
+<p>设$v_1,\dots,v_n$是$V$的基，$w_1,\dots,w_n\in W$.则存在唯一一个线性映射$T:V\rightarrow W$使得对任意$j=1,\dots,n$都有$Tv_j=w_j$.定义$T:V\rightarrow W$为$T(c_1v_1+\dots+c_nv_n)=c_1w_1+\dots+c_nw_n$.即为所求.</p>
+<p>注：唯一性即证充要性。该命题存在性表明线性映射可根据其在一个基上的取值来构造，唯一性表明线性映射完全由其在基上的取值确定.</p>
+<p><strong>$\mathcal{L}(V,W)$上的代数运算</strong></p>
+<p>设$S,T\in\mathcal{L}(V,W),\lambda\in\textbf{F}$</p>
+<p><strong>加法：</strong>$(S+T)(v)=Sv+Tv$</p>
+<p><strong>标量乘法：</strong>$(\lambda T)(v)=\lambda(Tv)$</p>
+<p><strong>线性映射的乘积</strong></p>
+<p>设$T\in\mathcal{L}(U,V),S\in\mathcal{L}(V,W)$，则乘积$ST\in\mathcal{L}(U,W)$定义为:$(ST)(u)=S(Tu)$</p>
+<p>注：只有当$T$映到$S$的定义域中时$ST$才有定义.</p>
+<p>线性映射乘积的运算具有结合性、单位元($I$)和分配性，不一定可交换，要注意定义域问题.</p>
+<p><strong>$\mathcal{L}(V,W)$是向量空间</strong></p>
+<p><strong>线性映射将$0$映为$0$</strong></p>
+<h2 id="零空间和值域"><a href="#零空间和值域" class="headerlink" title="零空间和值域"></a>零空间和值域</h2><p><strong>定义</strong></p>
+<p><strong>零空间：</strong>对于$T\in\mathcal{L}(V,W)$，$T$的零空间(记为null$T$)是指$V$中那些被$T$映为$0$的向量所构成的子集：null$T=\{v\in V:Tv=0\}$</p>
+<p><strong>单的：</strong>如果当$Tu=Tv$时必有$u=v$，则称映射$T:V\rightarrow W$也是单的.</p>
+<p><strong>值域：</strong>对于$V$到$W$的映射$T$，$T$的值域是$W$中形如$Tv$(其中$v\in V$)的向量组成的子集：range$T=\{Tv:v\in V\}$</p>
+<p><strong>满的：</strong>如果函数$T:V\rightarrow W$的值域等于$W$，则称$T$为满的.</p>
+<p><strong>定理</strong></p>
+<p><strong>零空间是子空间</strong></p>
+<p><strong>单射性等价于零空间为0</strong></p>
+<p><strong>值域是一个子空间</strong></p>
+<p><strong>线性映射基本定理：</strong>设$V$是有限维的，$T\in\mathcal{L}(V,W)$.则range$T$是有限维的且dim$V=$dim null$T+$dim range$T$.</p>
+<p><strong>到更小维数向量空间的线性映射不是单的</strong></p>
+<p><strong>到更大维数向量空间的线性映射不是满的</strong></p>
+<p>上述两个定理可用于以抽象方法证明变量多于方程的齐次线性方程组必有非零解以及必有一组常数项使得方程多于变量的相应非齐次线性方程组无解。线性方程组的问题可用线性映射来表述。</p>
+<p>书上关于这两个定理的证明采用了线性映射基本定理的结论，但也可不直接使用这一定理，不妨一试。</p>
+<h2 id="私货笔记-2"><a href="#私货笔记-2" class="headerlink" title="私货笔记"></a>私货笔记</h2><p>4.2中提到的关于到更小维数向量空间的线性映射不是单的以及到更大维数向量空间的线性映射不是满的的不用线性映射基本定理的证明，可以从其在定义域基上的取值角度思考。后者的证明很trivial就不写了，只写前者。</p>
+<p>证：设dim$V&gt;$dim$W$，$T$为$V$到$W$的线性映射.假设$T$是单的，则null$T=\{0\}$.设$v_1,\dots,v_n$为$V$的一组基，range$T$的一组基为$w_1,\dots,w_m$,其中$w_i=T(a_1v_1+\dots+a_nv_n)=a_1T(v_1)+\dots+a_nT(v_n)$($a_1,\dots,a_n\in \textbf{F}$)，则向量组{$w_1,\dots,w_m$}可由向量组{$T(v_1),\dots,T(v_n)$}线性表出，由于$m&lt;n$，可知向量组{$T(v_1),\dots,T(v_n)$}线性相关.不妨设$T(v_j)=c_1T(v_1)+\dots+c_nT(v_n)$(其中$c_1,\dots,c_n\in\textbf{F}$且不全为0)，则$T(-v_j-c_1v_1-\dots-c_nv_n)=0$.又因为null$T=\{0\}$，所以$v_j-c_1v_1-\dots-c_nv_n=0$，$v_1,\dots,v_n$线性相关，产生矛盾，故假设不成立.得证.</p>
 
     </div>
 
