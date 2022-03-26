@@ -28,7 +28,7 @@
 <meta property="og:description" content="深度学习入门——用python从轮子开始造神经网络前言由于作者水平问题，对深度学习的原理也给不出什么独到精妙的理解，本文单从实践角度试图让深度学习看起来简单一点。 本文不涉及任何已有框架如pytorch、tensorflow，环境为anaconda的默认base环境。 本文使用数据集：MNIST数据集 需要提前指出的是，依据本文内容写出的神经网络是最最简单最最原始的那种，换言之，你肯定没法跑出结果">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-26T02:17:31.000Z">
-<meta property="article:modified_time" content="2022-03-26T02:23:58.295Z">
+<meta property="article:modified_time" content="2022-03-26T03:29:27.330Z">
 <meta property="article:author" content="时棋">
 <meta property="article:tag" content="人工智能">
 <meta property="article:tag" content="深度学习">
@@ -213,7 +213,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-03-26 10:17:31 / 修改时间：10:23:58" itemprop="dateCreated datePublished" datetime="2022-03-26T10:17:31+08:00">2022-03-26</time>
+      <time title="创建时间：2022-03-26 10:17:31 / 修改时间：11:29:27" itemprop="dateCreated datePublished" datetime="2022-03-26T10:17:31+08:00">2022-03-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -252,46 +252,44 @@
 <p>不涉及具体技术细节，我们也可以描述其大概的结构。首先神经网络要有输入和输出，输入的是图像数据，输出对其的分类预测值，中间经过一系列数据处理……没错就这三层，输入层、中间层、输出层。中间层也称为隐藏层，神经网络的深度就是指中间层的层数。本文目标是从头造一个最简单的神经网络，那就只造一层，同时忽略偏置。</p>
 <p>以MNIST数据集为例，一张图片输入进神经网络，输入层就是1 * 784的数组，也就是说有784个参数。中间层可以设置任意个数的神经元，接收输入层数据后经过一定处理将数据传给输出层，由于我们这里造的是单层神经网络，所以中间层和输出层其实合并了，直观上看就是在中间层完成了所有处理。</p>
 <p>宏观上大致扫一遍，下面从具体细节看，每个神经元都要接收所有输入的数据，然后依据一个函数对其进行处理再输出。显然我们不可能只是把所有输入值相加，这里就涉及到神经网络可以称得上智能的地方了。输入值是按一定权重被神经元接收的，比如，2个神经元接收3个数据，就可以表示成：</p>
-<script type="math/tex; mode=display">
-\begin{cases}a_1=w_{11}x_1+w_{21}x_2+w_{31}x_3\\a_2=w_{12}x_1+w_{22}x_2+w_{32}x_3\end{cases}</script><p>其中$a_1,a_2$即为神经元接收到的值，$x_1,x_2,x_3$即为输入值，$w$为各输入值的权重。理论上，每个式子后面都可以分别加上一个常数$b$作为偏置，但为求简略这里就忽略了。用矩阵的写法来看，那就是：</p>
-<script type="math/tex; mode=display">
-A=\begin{pmatrix}x_1&x_2&x_3\end{pmatrix}\begin{pmatrix}w_{11}&w_{12}\\w_{21}&w_{22}\\w_{31}&w_{32}\end{pmatrix}=\begin{pmatrix}a_1&a_2\end{pmatrix}</script><p>这里的权重矩阵就是神经网络能够对图像进行分类的核心所在，在机器学习中，这个权重矩阵是由人工确定的，而在深度学习中，这个矩阵是可以通过训练得到的，不涉及人工。</p>
+<p>$\begin{cases}a_1=w_{11}x_1+w_{21}x_2+w_{31}x_3\\a_2=w_{12}x_1+w_{22}x_2+w_{32}x_3\end{cases}$</p>
+<p>其中$a_1,a_2$即为神经元接收到的值，$x_1,x_2,x_3$即为输入值，$w$为各输入值的权重。理论上，每个式子后面都可以分别加上一个常数$b$作为偏置，但为求简略这里就忽略了。用矩阵的写法来看，那就是：</p>
+<p>$A=\begin{pmatrix}x_1&amp;x_2&amp;x_3\end{pmatrix}\begin{pmatrix}w_{11}&amp;w_{12}\\w_{21}&amp;w_{22}\\w_{31}&amp;w_{32}\end{pmatrix}=\begin{pmatrix}a_1&amp;a_2\end{pmatrix}$</p>
+<p>这里的权重矩阵就是神经网络能够对图像进行分类的核心所在，在机器学习中，这个权重矩阵是由人工确定的，而在深度学习中，这个矩阵是可以通过训练得到的，不涉及人工。</p>
 <p>初始化生成一个权重矩阵的代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">w = np.random.randn(input_layel,output_layel)</span><br><span class="line"><span class="comment">#第一个参数是输入层的数据个数，在单层网络的情况下第二个参数为输出层的参数个数，亦即要分类的类别个数</span></span><br></pre></td></tr></table></figure>
 <p>numpy中的矩阵乘法函数：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A = np.dot(x,w)</span><br><span class="line"><span class="comment">#注意矩阵形状正确</span></span><br></pre></td></tr></table></figure>
 <h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><p>现在中间层接收到的矩阵$A$相当于未经内部处理的“刺激”，还需要神经元内部的函数对其进行转化，这个函数被称为激活函数。在感知机中，这个激活函数一般为阶跃函数，即：</p>
-<script type="math/tex; mode=display">
-f(x)=\begin{cases}1& x\ge0\\-1& x<0\end{cases}</script><p>这个函数既不连续又不可导，差评，换人。</p>
+<p>$f(x)=\begin{cases}1&amp; x\ge0\-1&amp; x&lt;0\end{cases}$</p>
+<p>这个函数既不连续又不可导，差评，换人。</p>
 <p>sigmoid函数：</p>
-<script type="math/tex; mode=display">
-f(x)=\frac{1}{1+e^{-x}}</script><p>ReLU函数：</p>
-<script type="math/tex; mode=display">
-f(x)=\begin{cases}x&x>0\\0&x\le0\end{cases}</script><p>这两个是常用的激活函数，下面我们会看到为什么激活函数需要连续可导，这是梯度下降算法的关键。</p>
+<p>$f(x)=\frac{1}{1+e^{-x}}$</p>
+<p>ReLU函数：</p>
+<p>$f(x)=\begin{cases}x&amp;x&gt;0\\0&amp;x\le0\end{cases}$</p>
+<p>这两个是常用的激活函数，下面我们会看到为什么激活函数需要连续可导，这是梯度下降算法的关键。</p>
 <p>实现这两个函数的代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sigmoid_function</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>/(<span class="number">1</span>+np.exp(-x))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ReLU_function</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">return</span> np.maximum(x,<span class="number">0</span>)</span><br><span class="line"><span class="comment">#参数均为np数组</span></span><br></pre></td></tr></table></figure>
 <p>输出层需要输出具有概率意义的数据，即在0，1之间的数据，作为分类的预测值，二元分类输出层的激活函数一般为sigmoid函数，多元分类为softmax函数。</p>
 <p>softmax函数：</p>
-<script type="math/tex; mode=display">
-y_k=\frac{e^{x_k}}{\sum\limits_{i=1}\limits^ne^{x_i}}</script><p>这里的$y_k$即为图像为第k类的概率的预测值。</p>
+<p>$y_k=\frac{e^{x_k}}{\sum\limits_{i=1}\limits^ne^{x_i}}$</p>
+<p>这里的$y_k$即为图像为第k类的概率的预测值。</p>
 <p>但由于指数运算容易超出程序可处理的范围，所以要对函数做一些改进，原理如下：</p>
-<script type="math/tex; mode=display">
-\begin{align}
-y_k&=\frac{e^{x_k}}{\sum\limits_{i=1}\limits^ne^{x_i}}=\frac{Ce^{x_k}}{C\sum\limits_{i=1}\limits^ne^{x_i}}=\frac{e^{x_k+logC}}{\sum\limits_{i=1}\limits^ne^{x_i+logC}}\\&=\frac{e^{x_k+C'}}{\sum\limits_{i=1}\limits^ne^{x_i+C'}}
-\end{align}</script><p>简而言之，可以对输入的数组每个元素都加一个常数。一般来说，我们减去数组中的最大值。</p>
+<p>$\begin{align}<br>y_k&amp;=\frac{e^{x_k}}{\sum\limits_{i=1}\limits^ne^{x_i}}=\frac{Ce^{x_k}}{C\sum\limits_{i=1}\limits^ne^{x_i}}=\frac{e^{x_k+logC}}{\sum\limits_{i=1}\limits^ne^{x_i+logC}}=\frac{e^{x_k+C’}}{\sum\limits_{i=1}\limits^ne^{x_i+C’}}<br>\end{align}$</p>
+<p>简而言之，可以对输入的数组每个元素都加一个常数。一般来说，我们减去数组中的最大值。</p>
 <p>实现代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">softmax_function</span>(<span class="params">x</span>):</span></span><br><span class="line">    c = np.<span class="built_in">max</span>(x)</span><br><span class="line">    exp_x = np.exp(x-c)</span><br><span class="line">    y = exp_x/np.<span class="built_in">sum</span>(exp_x)</span><br><span class="line">    <span class="keyword">return</span> y</span><br></pre></td></tr></table></figure>
 <p>最后输出的就是最终的预测值了，以MNIST数据集为例，输出的数组中含有10个元素，每个元素对应其属于对应类的概率，如输入图像为5，那么我们预期中神经网络的输出数组的第五个元素应该显著大于其余元素。</p>
 <h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p>那么如何描述这个显著呢？引入损失函数，即预测值与实际值的偏差。常见的损失函数有均方误差与交叉熵误差。</p>
 <p>均方误差：</p>
-<script type="math/tex; mode=display">
-E=\frac{\sum(y_k-t_k)^2}{k}</script><p>k为数组中数据的个数，$y_k$表示有k个元素的预测值，$t_k$为实际值，其中核心是分子的式子，不改变核心的前提下可以对其进行放缩，不妨将其放大$\frac{k}{2}$倍，变成：</p>
-<script type="math/tex; mode=display">
-E=\frac{1}{2}\sum(y_k-t_k)^2</script><p>实现代码：</p>
+<p>$E=\frac{\sum(y_k-t_k)^2}{k}$</p>
+<p>k为数组中数据的个数，$y_k$表示有k个元素的预测值，$t_k$为实际值，其中核心是分子的式子，不改变核心的前提下可以对其进行放缩，不妨将其放大$\frac{k}{2}$倍，变成：</p>
+<p>$E=\frac{1}{2}\sum(y_k-t_k)^2$</p>
+<p>实现代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mean_squared_error</span>(<span class="params">y,t</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0.5</span>*np.<span class="built_in">sum</span>((y-t)**<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <p>交叉熵误差：</p>
-<script type="math/tex; mode=display">
-E=-\sum t_k\log y_k</script><p>由于实际值数组中除正确分类对应位置的元素为1，其余都为0，实际上交叉熵误差的值就是负的预测值对应位置元素的自然对数。</p>
+<p>$E=-\sum t_k\log y_k$</p>
+<p>由于实际值数组中除正确分类对应位置的元素为1，其余都为0，实际上交叉熵误差的值就是负的预测值对应位置元素的自然对数。</p>
 <p>为了防止运算中$y_k$内有元素为0导致的错误情况，对每个元素加上一个小值delta。</p>
 <p>实现代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cross_entropy_error</span>(<span class="params">y,t</span>):</span></span><br><span class="line">    delta = <span class="number">1e-7</span></span><br><span class="line">    <span class="keyword">return</span> -np.<span class="built_in">sum</span>(t*np.log(y+delta))</span><br></pre></td></tr></table></figure>
